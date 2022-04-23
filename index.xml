@@ -2,22 +2,97 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blog[dot]star</title>
-    <link>http://localhost:1313/blog/</link>
+    <link>http://localhost:39325/blog/</link>
     <description>Recent content on blog[dot]star</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Apr 2022 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:39325/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Book Review: Profiles in Courage by John F. Kennedy</title>
-      <link>http://localhost:1313/blog/books/profiles_in_courage/review/</link>
+      <link>http://localhost:39325/blog/books/profiles_in_courage/review/</link>
       <pubDate>Tue, 12 Apr 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/books/profiles_in_courage/review/</guid>
+      <guid>http://localhost:39325/blog/books/profiles_in_courage/review/</guid>
       <description>&lt;p&gt;Review of the 1956 Pulitzer Prize winning classic by then Senator John F. Kennedy.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Favorite Quotes</title>
+      <link>http://localhost:39325/blog/misc/quotes/quotes/</link>
+      <pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:39325/blog/misc/quotes/quotes/</guid>
+      <description>&lt;p&gt;Various quotes I&amp;rsquo;ve come across that are particularly good.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>__TODO__ Training a CNN to Classify Dogs</title>
+      <link>http://localhost:39325/blog/ml/dog_breed_cnn/dog_breed_cnn/</link>
+      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:39325/blog/ml/dog_breed_cnn/dog_breed_cnn/</guid>
+      <description>&lt;p&gt;How to train a convolutional neural net (CNN) to classify pictures
+of dogs by the breed of the dog.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>__TODO__ Intuition Behind the Jacobian Determinant</title>
+      <link>http://localhost:39325/blog/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:39325/blog/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</guid>
+      <description>&lt;p&gt;An intuitive way to understand what the determinant of the Jacobian is doing and why it is used.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>__TODO__ Introduction to Spark RDDs</title>
+      <link>http://localhost:39325/blog/programming/spark_rdds/spark_rdds/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:39325/blog/programming/spark_rdds/spark_rdds/</guid>
+      <description>&lt;p&gt;A basic guide to the distributed dataset (RDD) strcture in Spark.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>__TODO__ How to Setup a Hugo Blog?</title>
+      <link>http://localhost:39325/blog/programming/hugo/how_to_hugo/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:39325/blog/programming/hugo/how_to_hugo/</guid>
+      <description>&lt;p&gt;How to begin setting up a Hugo blog&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>__TODO__ What Is __init__.py Anyway?</title>
+      <link>http://localhost:39325/blog/programming/what_is_init_py/what_is_init_py/</link>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:39325/blog/programming/what_is_init_py/what_is_init_py/</guid>
+      <description>&lt;p&gt;The details of what that pesky &lt;code&gt;__init__.py&lt;/code&gt; file is actually doing in all of the Python modules out there.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>__TODO__ The Basics of Spectral Clustering</title>
+      <link>http://localhost:39325/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/</link>
+      <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:39325/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/</guid>
+      <description>&lt;p&gt;A beginner&amp;rsquo;s introduction to the intuitive math behind spectral clustering and how it is useful versus other clustering methods.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>__TODO__ Memoization in Python</title>
+      <link>http://localhost:39325/blog/programming/memoization_example/memoization_example/</link>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:39325/blog/programming/memoization_example/memoization_example/</guid>
+      <description>&lt;p&gt;Memoization is a useful tool to speed up programs that are either recursive
+or simply repetitive in nature. This post is an introduction in how to
+use this technique (through decorators) in Python.&lt;/p&gt;</description>
     </item>
     
   </channel>

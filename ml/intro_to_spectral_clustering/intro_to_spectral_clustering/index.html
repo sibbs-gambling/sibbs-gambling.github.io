@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.57.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="Justin">
+<meta name="keywords" content="">
+<meta name="description" content="A beginner&#39;s introduction to the intuitive math behind spectral clustering and how it is useful versus other clustering methods.">
+
+
+<meta property="og:description" content="A beginner&#39;s introduction to the intuitive math behind spectral clustering and how it is useful versus other clustering methods.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="__TODO__ The Basics of Spectral Clustering">
+<meta name="twitter:title" content="__TODO__ The Basics of Spectral Clustering">
+<meta property="og:url" content="http://localhost:39325/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/">
+<meta property="twitter:url" content="http://localhost:39325/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/">
+<meta property="og:site_name" content="blog[dot]star">
+<meta property="og:description" content="A beginner&#39;s introduction to the intuitive math behind spectral clustering and how it is useful versus other clustering methods.">
+<meta name="twitter:description" content="A beginner&#39;s introduction to the intuitive math behind spectral clustering and how it is useful versus other clustering methods.">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2018-04-10T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2018-04-10T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Machine Learning">
+    
+  
+  
+    
+      <meta property="article:tag" content="machine learning">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="http://localhost:39325/blog/images/blog_logo.png">
+  <meta property="twitter:image" content="http://localhost:39325/blog/images/blog_logo.png">
+
+
+    <title>__TODO__ The Basics of Spectral Clustering</title>
+
+    <link rel="icon" href="http://localhost:39325/blog/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="http://localhost:39325/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="http://localhost:39325/blog/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="2">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="http://localhost:39325/blog/">blog[dot]star</a>
+  </div>
+  
+</header>
+
+
+      <nav id="sidebar" data-behavior="2">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="http://localhost:39325/blog/">
+          <img class="sidebar-profile-picture" src="http://localhost:39325/blog/images/blog_logo.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">Justin</h4>
+        
+          <h5 class="sidebar-profile-bio"><p>This is a blog about topics I find both interesting and/or want to learn
+  more about. Having to structure a well organized post requires more than
+  just a passive understanding of something, so I am as much learning about
+  something as I write as the eventual reader is.</p>
+
+<p>The name, pronounced as
+  <em>blog dot star</em>, comes from the regular expression .* that
+  matches an arbitrary string of any length. Similarly, I write about any topic
+  I find interesting.</p>
+</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://localhost:39325/blog/#home">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://localhost:39325/blog/programming">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Programming</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://localhost:39325/blog/ml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code-fork"></i>
+      
+      <span class="sidebar-button-desc">Machine Learning</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://localhost:39325/blog/books">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-book"></i>
+      
+      <span class="sidebar-button-desc">Book Reviews</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://localhost:39325/blog/misc">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-asterisk"></i>
+      
+      <span class="sidebar-button-desc">Miscellaneous</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://localhost:39325/blog/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://localhost:39325/blog/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="http://localhost:39325/blog/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+
+      <div id="main" data-behavior="2"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      __TODO__ The Basics of Spectral Clustering
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2018-04-10T00:00:00Z">
+        
+  April 10, 2018
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="http://localhost:39325/blog/categories/machine-learning">Machine Learning</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>A beginner&rsquo;s introduction to the intuitive math behind spectral clustering and how it is useful versus other clustering methods.</p>
+
+<p>$$\sum_{x=1}^5 y^z$$</p>
+
+<p>$$
+\begin{algorithm}[H]
+\begin{algorithmic}[H]
+x
+\end{algorithmic}
+\end{algorithm}
+$$</p>
+
+<p>$$
+\begin{algorithm}[H]
+\caption{Spectral Clustering}\label{spectralalg}
+\begin{algorithmic}[H]
+\State \textbf{\textit{Input:}} Weighted adjacency matrix $W \in \mathbb{R}^{N \times N}$, number of clusters $k$
+\State Compute degree matrix $D$
+\State $L \gets D - W$
+\State Compute first $k$ eigenvectors $v_1, &hellip;, v_k$  of $L$ and stack them into $X \in \mathbb{R}^{N \times k}$
+\State $y_i \gets$ normalized ith row of $X \quad$   (note: $y_i \in \mathbb{R}^{k}$)
+\State Cluster $(y<em>i)</em>{i=1,&hellip;,n}$ into clusters $C_1, &hellip;, C_k$ using k-means
+\State \textbf{\textit{Output:}} Clusters $A_1,&hellip;,A_k$ where $A_i = {j | y_j \in C_i }$
+\end{algorithmic}
+\end{algorithm}
+$$</p>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>Many of the clustering techniques we have learned throughout the ML sequence in the MSCF program only work well for convex or <em>blob</em> type data. When the data is non-convex, the performance of these techniques decreases substantially. This happens because these methods use elliptical metrics to form the clustered groups. Following the canonical example of concentric crescents shown in Figure 1 we can see that k-means where $k=3$ would result in a clearly incorrect clustering. This is a well known problem and much work has been done on methods that overcome this issue such as hierarchical clustering using single-linkages. Spectral clustering has become one of the most popular methods to cluster non-convex data.</p>
+
+<p><center>
+<img src="https://raw.githubusercontent.com/sibbs-gambling/spectral-clust-crypto/master/docs/writeup/nonconvex_sets.png" style="width:200px;"/>
+</center></p>
+
+<p>As noted in Wang and Zhang (2005), time series are not amenable to being clustered using traditional methods such as k-means. They can be of varying length depending on the number of observations and are often very high dimensional. The authors have proposed spectral clustering as a means to get past these problems. Of the most important reasons to use spectral clustering in the case of time series is that the dimensionality does not affect the computational costs of running the algorithm. When one has an appropriate similarity measure or distance matrix, this can be fed into the algorithm without extra computational burden for even very high dimensional time series. For example if you had hourly time series for ten currencies over a week versus over a decade, given that one has a distance matrix for both, the spectral clustering takes the same amount of time in either case. Different methods can be used to compute the distance matrix, in our case we will use the same as for Minimum Spanning Trees. Below we guide the reader through an introduction to spectral clustering starting from the basic building blocks progressing to interpretations of the algorithm&rsquo;s output.</p>
+
+<h3 id="basics">Basics</h3>
+
+<p>Given a positive similarity metric $$s_{ij} := \text{similarity}(x_i, x_j) \geq 0$$  between points in a set, $S = $ { $x_1,x_2,&hellip;, x_N$}, clustering can be thought of as attempting to form groups where the in-group similarity metrics are high and the out-group similarity is low. An often used similarity metric is that of the radial basis function kernel (RBF). There is an entire sub-field of mathematics devoted to studying problems of this type, graph theory. Spectral clustering uses much of the methodology from this area.The basic building blocks are as follows.</p>
+
+<ul>
+<li>We represent vertices (or nodes) as belonging to the set $V = $ { $v_1, &hellip;, v_n$}</li>
+<li>Let $E$ be the set of edges or connections between vertices, where each edge is weighted with some similarity metric $$w<em>{ij} = s</em>{ij}  \forall \hspace{0.1cm} i \neq j$$, $w_{ii}$ is often taken to be zero though that ultimately won&rsquo;t change the results of the algorithm.</li>
+<li>$G = (V, E)$ is thus a fully defined graph. The weights form a weighted-adjacency matrix
+$W = (w_<em>{ij})_{i,j=1,&hellip;,N}$. In our case the graph is undirected, meaning connections are independent of direction being traveled between nodes. This means that $w</em>{ij} = w_{ji}$, the adjacency matrix is symmetric. The degree of a vertex measures how strong the connections are that exist between it and other vertices,
+$$
+d<em>i = \sum</em>{j=1}^N w_{ij}.
+$$
+Using the set of ${d_1,..,d_N}$ we form a diagonal matrix. This matrix, $D$, is the degree matrix of size $N \times N$. Please note that we use $D$ to represent the distance matrix later in the document but in this section we use it to represent the degree matrix.
+\begin{figure}[H]
+\centering
+\includegraphics[totalheight=2.5cm]{graph.pdf}
+\caption{Undirected Weighted Graph}
+\label{fig:graph1}
+\end{figure}
+Using the example in Figure \ref{fig:graph1} where we assume vertex 2 (not shown) has no connections, we would have the following for $W$ and $D$. Please note we use zero-based indexing here.
+$$
+W = \begin{pmatrix}
+0 &amp; 0 &amp; 0 &amp; 3 &amp; 4 &amp; 5 \newline
+0 &amp; 0 &amp; 0 &amp; 2 &amp; 0 &amp; 0 \newline
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \newline
+3 &amp; 2 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \newline
+4 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 \newline
+5 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \newline
+\end{pmatrix}
+$$
+$$ D = \begin{pmatrix} 12 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \newline
+0 &amp; 2 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \newline
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 \newline
+0 &amp; 0 &amp; 0 &amp; 5 &amp; 0 &amp; 0 \newline
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 5 &amp; 0 \newline
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 6 \newline
+\end{pmatrix} $$
+\newline
+The final basic building block one should know is the notion of connected components. If $A \subseteq V$, $A$ is said to be a connected component of $G$ if any two vertices $v_i, v_j \in A$ can be connected such that all intermediate vertices are also in $A$.</li>
+</ul>
+
+<h3 id="graph-laplacians">Graph Laplacians</h3>
+
+<p>The Laplacian matrix is an extremely useful tool that can be used to find many properties of a graph. It is defined as,
+$$
+L = D - W.
+$$
+As noted above one can see that it won&rsquo;t matter what you make the self-to-self weighting for the vertices. Any self weighting will result in the exact same $L$.</p>
+
+<p><em>Properties of $L$</em></p>
+
+<ul>
+<li>$L$ is symmetric and positive semi-definite</li>
+<li>All of the row and column sums of $L$ equal 0</li>
+<li>The smallest eigenvalue of $L$ is zero with eigenvector $v = (1, 1, &hellip;, 1)$</li>
+<li>$L$ has $N$ non-negative eigenvalues 0 $=\lambda_1 \leq \lambda_2 \leq &hellip; \leq \lambda_N$</li>
+<li>$\forall  f \in \mathbb{R}^N $</li>
+</ul>
+
+<p>$ f&rsquo;Lf = \frac{1}{2} \sum<em>{i,j = 1}^N w</em>{ij}(f_i - f_j)^2. $</p>
+
+<p>One of the most interesting and useful properties of $L$ is that the the number of connected components in $G$ is equal to the algebraic multiplicity of eigenvalue 0. This is also equal to the dimension of the nullspace of $L$. To show this is true imagine a case where there is only one connected component, the whole graph. If the eigenvector pertaining to the eigenvalue 0 is $f$ then from the properties above we have,</p>
+
+<p>$
+0 = f&rsquo; L f = \sum<em>{i,j=1}^N w</em>{ij}(f_i - f_j)^2.
+$</p>
+
+<p>Every term in the summation is non negative as the second term is squared and the weights in our graph are non-negative. This means that for the equality to hold every $w_{ij}(f_i - f<em>j)^2$ must equal zero. This graph is connected so all $w</em>{ij} &gt; 0 \hspace{0.1cm} \forall \hspace{0.1cm} i \neq j$. This means that $f_i=f_j$, thus $f$ needs to be a vector where every element is equal. After normalizing, $f$ is then $(1, 1, &hellip;, 1)$ or the unit vector. A similar argument holds for a graph with $n$ connected components. The matrices $W$ and thus $L$ will now be block diagonal if we order them according to which connected component they belong to. We call each block $L^i$. Equation \ref{eq} still needs to hold and knowing that each block $L^i$ is a connected component it has $f^i = (1, 1, &hellip;, 1)$ thus $f$ for the entire $L$ is this vector padded with zeros where the other blocks are. There will precisely $n$ of these vectors. For example, if each block was size $2 \times 2$ and there were $n=3$ blocks, meaning $N=6$, the 3 normalized eigenvectors pertaining to the eigenvalue zero would look like, $v_1 = (1, 1, 0, 0, 0, 0)$, $v_2 = (0 ,0, 1, 1, 0, 0)$, and $v_3 = (0, 0, 0, 0, 1, 1)$. In reality we will not observe completely disconnected sub-graphs but some perturbation of $L$. This perturbation \textit{will not} substantially affect the resultant vectors. As show in Sun and Stewart (1990) \cite{perturb} the stability of the eigenvectors is determined by the eigengap betwen $\lambda<em>k$ and $\lambda</em>{k+1}$.
+In a number of experiments run in Ng et al. (2001) \cite{ng}, this eigengap is large for most any reasonable perturbation. As such they provide a reasonable matrix (when stacked) on which to cluster the rows. We discuss this in detail later in this section.
+\end{multicols}</p>
+
+<h3 id="algorithm">Algorithm</h3>
+
+<p>\begin{algorithm}[H]
+\caption{Spectral Clustering}\label{spectralalg}
+\begin{algorithmic}[H]
+\State \textbf{\textit{Input:}} Weighted adjacency matrix $W \in \mathbb{R}^{N \times N}$, number of clusters $k$
+\State Compute degree matrix $D$
+\State $L \gets D - W$
+\State Compute first $k$ eigenvectors $v_1, &hellip;, v_k$  of $L$ and stack them into $X \in \mathbb{R}^{N \times k}$
+\State $y_i \gets$ normalized ith row of $X \quad$   (note: $y_i \in \mathbb{R}^{k}$)
+\State Cluster $(y<em>i)</em>{i=1,&hellip;,n}$ into clusters $C_1, &hellip;, C_k$ using k-means
+\State \textbf{\textit{Output:}} Clusters $A_1,&hellip;,A_k$ where $A_i = {j | y_j \in C_i }$
+\end{algorithmic}
+\end{algorithm}</p>
+
+<p>\begin{multicols}{2}
+\subsection{Intuition and interpretation}
+\begin{figure}[H]
+    \centering
+    \subfloat[Non-convex original data]{{\includegraphics[width=3.5cm]{two_circles.png} }}
+    \quad
+    \subfloat[$y_1$ and $y_2$ (rows in $X$)]{{\includegraphics[width=3.5cm]{rowsy.png} }}
+    \caption{Why k-means works on $y_i$&rsquo;s}%
+    \label{fig:yrowsex}%
+\end{figure}</p>
+
+<p>After reading Algorithm \ref{spectralalg}, it may not seem obvious why spectral clustering works at all. Namely, one may wonder why we use k-means after all of the fuss about it performing so poorly for time series. The reason for this seeming inconsistency is that in using the algorithm above we transform into a space that is extremely amenable to being clustered using traditional methods. The choice of k-means is somewhat arbitrary and even simple methods like linear classifiers work well on the rows $y_i$. As can be seen in Figure \ref{fig:yrowsex} from \cite{ng} separation of the $y_i$ vectors in the $k=2$ dimensional space is trivial. One should also be aware that the smallest eigenvalues will not be identically zero but are interpreted as such when small enough, this happens because we are not in the ideal <em>noiseless</em> case.
+Care should also be taken in choosing $k$, the number of clusters the algorithm will group $y_i$&rsquo;s into. Some authors have chosen $k$ to be the $k$-th eigenvalue directly prior to a jump in the eigenvalues (when sorted). This method has been controversial as there is little theoretical backing for doing so and is heavily dependent on specific qualities of the data. Zelnik-Manor and Perona (2005) propose a self-tuning process that chooses $k$ from the eigenvectors by maximizing sparseness in the matrix of $k$ eigenvectors. At the most basic level one could use qualitative knowledge, in our case about the geographic or legal aspects of the currency market that would lead to some specific number of clusters.</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="http://localhost:39325/blog/tags/machine-learning/">machine learning</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:39325/blog/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/" data-tooltip="__TODO__ Intuition Behind the Jacobian Determinant">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:39325/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://localhost:39325/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2022 Justin. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="http://localhost:39325/blog/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/" data-tooltip="__TODO__ Intuition Behind the Jacobian Determinant">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:39325/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://localhost:39325/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A39325%2Fblog%2Fml%2Fintro_to_spectral_clustering%2Fintro_to_spectral_clustering%2F">
+          <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http%3A%2F%2Flocalhost%3A39325%2Fblog%2Fml%2Fintro_to_spectral_clustering%2Fintro_to_spectral_clustering%2F">
+          <i class="fa fa-twitter"></i><span>Share on Twitter</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="http://localhost:39325/blog/images/blog_logo.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">Justin</h4>
+    
+      <div id="about-card-bio"><p>This is a blog about topics I find both interesting and/or want to learn
+  more about. Having to structure a well organized post requires more than
+  just a passive understanding of something, so I am as much learning about
+  something as I write as the eventual reader is.</p>
+
+<p>The name, pronounced as
+  <em>blog dot star</em>, comes from the regular expression .* that
+  matches an arbitrary string of any length. Similarly, I write about any topic
+  I find interesting.</p>
+</div>
+    
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        New York, NY
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('http://localhost:39325/blog/images/cover-v1.2.0.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="http://localhost:39325/blog/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'http:\/\/localhost:39325\/blog\/ml\/intro_to_spectral_clustering\/intro_to_spectral_clustering\/';
+          
+            this.page.identifier = '\/ml\/intro_to_spectral_clustering\/intro_to_spectral_clustering\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'blog[dot]star';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      CommonHTML: { linebreaks: { automatic: true } },
+      tex2jax: { inlineMath: [ ['$', '$'], ['\\(','\\)'] ], displayMath: [ ['$$','$$'], ['\\[', '\\]'] ], processEscapes: false },
+      messageStyle: 'none'
+    });
+  </script>
+
+
+
+    
+  <script data-no-instant>document.write('<script src="/livereload.js?port=39325&mindelay=10&v=2"></' + 'script>')</script></body>
+</html>
+
