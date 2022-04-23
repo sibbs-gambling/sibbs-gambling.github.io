@@ -2,48 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programmings on blog[dot]star</title>
-    <link>http://localhost:39325/blog/programming/</link>
+    <link>http://localhost:1313/blog/programming/</link>
     <description>Recent content in Programmings on blog[dot]star</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Sep 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:39325/blog/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/blog/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>__TODO__ Introduction to Spark RDDs</title>
-      <link>http://localhost:39325/blog/programming/spark_rdds/spark_rdds/</link>
+      <link>http://localhost:1313/blog/programming/spark_rdds/spark_rdds/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:39325/blog/programming/spark_rdds/spark_rdds/</guid>
+      <guid>http://localhost:1313/blog/programming/spark_rdds/spark_rdds/</guid>
       <description>&lt;p&gt;A basic guide to the distributed dataset (RDD) strcture in Spark.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>__TODO__ How to Setup a Hugo Blog?</title>
-      <link>http://localhost:39325/blog/programming/hugo/how_to_hugo/</link>
+      <link>http://localhost:1313/blog/programming/hugo/how_to_hugo/</link>
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:39325/blog/programming/hugo/how_to_hugo/</guid>
+      <guid>http://localhost:1313/blog/programming/hugo/how_to_hugo/</guid>
       <description>&lt;p&gt;How to begin setting up a Hugo blog&amp;hellip;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>__TODO__ What Is __init__.py Anyway?</title>
-      <link>http://localhost:39325/blog/programming/what_is_init_py/what_is_init_py/</link>
+      <link>http://localhost:1313/blog/programming/what_is_init_py/what_is_init_py/</link>
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:39325/blog/programming/what_is_init_py/what_is_init_py/</guid>
+      <guid>http://localhost:1313/blog/programming/what_is_init_py/what_is_init_py/</guid>
       <description>&lt;p&gt;The details of what that pesky &lt;code&gt;__init__.py&lt;/code&gt; file is actually doing in all of the Python modules out there.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>__TODO__ Memoization in Python</title>
-      <link>http://localhost:39325/blog/programming/memoization_example/memoization_example/</link>
+      <link>http://localhost:1313/blog/programming/memoization_example/memoization_example/</link>
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:39325/blog/programming/memoization_example/memoization_example/</guid>
+      <guid>http://localhost:1313/blog/programming/memoization_example/memoization_example/</guid>
       <description>&lt;p&gt;Memoization is a useful tool to speed up programs that are either recursive
 or simply repetitive in nature. This post is an introduction in how to
 use this technique (through decorators) in Python.&lt;/p&gt;</description>

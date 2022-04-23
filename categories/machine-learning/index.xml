@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Machine Learning on blog[dot]star</title>
-    <link>http://localhost:39325/blog/categories/machine-learning/</link>
+    <link>http://localhost:1313/blog/categories/machine-learning/</link>
     <description>Recent content in Machine Learning on blog[dot]star</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 30 Sep 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:39325/blog/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/blog/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>__TODO__ Training a CNN to Classify Dogs</title>
-      <link>http://localhost:39325/blog/ml/dog_breed_cnn/dog_breed_cnn/</link>
+      <link>http://localhost:1313/blog/ml/dog_breed_cnn/dog_breed_cnn/</link>
       <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:39325/blog/ml/dog_breed_cnn/dog_breed_cnn/</guid>
+      <guid>http://localhost:1313/blog/ml/dog_breed_cnn/dog_breed_cnn/</guid>
       <description>&lt;p&gt;How to train a convolutional neural net (CNN) to classify pictures
 of dogs by the breed of the dog.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>__TODO__ Intuition Behind the Jacobian Determinant</title>
-      <link>http://localhost:39325/blog/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</link>
+      <link>http://localhost:1313/blog/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</link>
       <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:39325/blog/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</guid>
+      <guid>http://localhost:1313/blog/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</guid>
       <description>&lt;p&gt;An intuitive way to understand what the determinant of the Jacobian is doing and why it is used.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>__TODO__ The Basics of Spectral Clustering</title>
-      <link>http://localhost:39325/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/</link>
+      <link>http://localhost:1313/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:39325/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/</guid>
+      <guid>http://localhost:1313/blog/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/</guid>
       <description>&lt;p&gt;A beginner&amp;rsquo;s introduction to the intuitive math behind spectral clustering and how it is useful versus other clustering methods.&lt;/p&gt;</description>
     </item>
     
