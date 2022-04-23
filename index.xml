@@ -30,53 +30,7 @@
     </item>
     
     <item>
-      <title>__TODO__ Training a CNN to Classify Dogs</title>
-      <link>https://sibbs-gambling.github.io/ml/dog_breed_cnn/dog_breed_cnn/</link>
-      <pubDate>Mon, 30 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://sibbs-gambling.github.io/ml/dog_breed_cnn/dog_breed_cnn/</guid>
-      <description>&lt;p&gt;How to train a convolutional neural net (CNN) to classify pictures
-of dogs by the breed of the dog.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>__TODO__ Intuition Behind the Jacobian Determinant</title>
-      <link>https://sibbs-gambling.github.io/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</link>
-      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://sibbs-gambling.github.io/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</guid>
-      <description>&lt;p&gt;An intuitive way to understand what the determinant of the Jacobian is doing and why it is used.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>__TODO__ Introduction to Spark RDDs</title>
-      <link>https://sibbs-gambling.github.io/programming/spark_rdds/spark_rdds/</link>
-      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://sibbs-gambling.github.io/programming/spark_rdds/spark_rdds/</guid>
-      <description>&lt;p&gt;A basic guide to the distributed dataset (RDD) strcture in Spark.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>__TODO__ How to Setup a Hugo Blog?</title>
-      <link>https://sibbs-gambling.github.io/programming/hugo/how_to_hugo/</link>
-      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://sibbs-gambling.github.io/programming/hugo/how_to_hugo/</guid>
-      <description>&lt;p&gt;How to begin setting up a Hugo blog&amp;hellip;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>__TODO__ What Is __init__.py Anyway?</title>
-      <link>https://sibbs-gambling.github.io/programming/what_is_init_py/what_is_init_py/</link>
-      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://sibbs-gambling.github.io/programming/what_is_init_py/what_is_init_py/</guid>
-      <description>&lt;p&gt;The details of what that pesky &lt;code&gt;__init__.py&lt;/code&gt; file is actually doing in all of the Python modules out there.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>__TODO__ The Basics of Spectral Clustering</title>
+      <title>__IN PROGRESS__ The Basics of Spectral Clustering</title>
       <link>https://sibbs-gambling.github.io/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/</link>
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
@@ -85,7 +39,7 @@ of dogs by the breed of the dog.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>__TODO__ Memoization in Python</title>
+      <title>__IN PROGRESS__ Memoization in Python</title>
       <link>https://sibbs-gambling.github.io/programming/memoization_example/memoization_example/</link>
       <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
       

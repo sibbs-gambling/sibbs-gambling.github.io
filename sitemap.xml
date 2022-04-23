@@ -43,92 +43,52 @@
   </url>
   
   <url>
-    <loc>https://sibbs-gambling.github.io/ml/dog_breed_cnn/dog_breed_cnn/</loc>
-    <lastmod>2019-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/categories/</loc>
-    <lastmod>2019-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/categories/machine-learning/</loc>
-    <lastmod>2019-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/tags/machine-learning/</loc>
-    <lastmod>2019-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/ml/</loc>
-    <lastmod>2019-09-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</loc>
-    <lastmod>2019-09-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/tags/math/</loc>
-    <lastmod>2019-09-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/programming/spark_rdds/spark_rdds/</loc>
-    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/categories/programming/</loc>
-    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/tags/programming/</loc>
-    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/programming/</loc>
-    <lastmod>2019-09-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/programming/hugo/how_to_hugo/</loc>
-    <lastmod>2019-08-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/programming/what_is_init_py/what_is_init_py/</loc>
-    <lastmod>2019-08-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/tags/hugo/</loc>
-    <lastmod>2019-08-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/categories/python/</loc>
-    <lastmod>2019-08-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://sibbs-gambling.github.io/tags/python/</loc>
-    <lastmod>2019-08-29T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://sibbs-gambling.github.io/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/</loc>
     <lastmod>2018-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://sibbs-gambling.github.io/categories/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sibbs-gambling.github.io/categories/machine-learning/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sibbs-gambling.github.io/tags/machine-learning/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sibbs-gambling.github.io/ml/</loc>
+    <lastmod>2018-04-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://sibbs-gambling.github.io/programming/memoization_example/memoization_example/</loc>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sibbs-gambling.github.io/tags/programming/</loc>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sibbs-gambling.github.io/programming/</loc>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sibbs-gambling.github.io/categories/python/</loc>
+    <lastmod>2018-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://sibbs-gambling.github.io/tags/python/</loc>
     <lastmod>2018-01-03T00:00:00+00:00</lastmod>
   </url>
   
