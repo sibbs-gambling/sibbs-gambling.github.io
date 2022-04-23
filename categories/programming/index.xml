@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on blog[dot]star</title>
-    <link>http://localhost:1313/categories/programming/</link>
+    <link>https://sibbs-gambling.github.io/categories/programming/</link>
     <description>Recent content in Programming on blog[dot]star</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Sep 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sibbs-gambling.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>__TODO__ Introduction to Spark RDDs</title>
-      <link>http://localhost:1313/programming/spark_rdds/spark_rdds/</link>
+      <link>https://sibbs-gambling.github.io/programming/spark_rdds/spark_rdds/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/programming/spark_rdds/spark_rdds/</guid>
+      <guid>https://sibbs-gambling.github.io/programming/spark_rdds/spark_rdds/</guid>
       <description>&lt;p&gt;A basic guide to the distributed dataset (RDD) strcture in Spark.&lt;/p&gt;</description>
     </item>
     

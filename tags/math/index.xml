@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>math on blog[dot]star</title>
-    <link>http://localhost:1313/tags/math/</link>
+    <link>https://sibbs-gambling.github.io/tags/math/</link>
     <description>Recent content in math on blog[dot]star</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Sep 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/tags/math/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://sibbs-gambling.github.io/tags/math/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>__TODO__ Intuition Behind the Jacobian Determinant</title>
-      <link>http://localhost:1313/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</link>
+      <link>https://sibbs-gambling.github.io/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</link>
       <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</guid>
+      <guid>https://sibbs-gambling.github.io/ml/intuition_behind_the_determinant_of_th_jacobian/inuitition_det_jac/</guid>
       <description>&lt;p&gt;An intuitive way to understand what the determinant of the Jacobian is doing and why it is used.&lt;/p&gt;</description>
     </item>
     
