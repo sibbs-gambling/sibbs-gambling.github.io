@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on blog[dot]star</title>
-    <link>http://localhost:1313/blog/tags/hugo/</link>
+    <link>http://localhost:1313/tags/hugo/</link>
     <description>Recent content in hugo on blog[dot]star</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Aug 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/blog/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>__TODO__ How to Setup a Hugo Blog?</title>
-      <link>http://localhost:1313/blog/programming/hugo/how_to_hugo/</link>
+      <link>http://localhost:1313/programming/hugo/how_to_hugo/</link>
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/blog/programming/hugo/how_to_hugo/</guid>
+      <guid>http://localhost:1313/programming/hugo/how_to_hugo/</guid>
       <description>&lt;p&gt;How to begin setting up a Hugo blog&amp;hellip;&lt;/p&gt;</description>
     </item>
     
