@@ -6,10 +6,20 @@
     <description>Recent content on blog[dot]star</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Apr 2022 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://sibbs-gambling.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>__IN PROGRESS__ Comparing Standard Error Estimation Methodologies</title>
+      <link>https://sibbs-gambling.github.io/finance_econ/standard_errors/standard_errors_in_finance/</link>
+      <pubDate>Sat, 23 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://sibbs-gambling.github.io/finance_econ/standard_errors/standard_errors_in_finance/</guid>
+      <description>&lt;p&gt;This article compares various ways of estimating the standard errors of
+regression coefficients as used in the finance literature.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Book Review: Profiles in Courage by John F. Kennedy</title>
@@ -35,7 +45,7 @@
       <pubDate>Tue, 10 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://sibbs-gambling.github.io/ml/intro_to_spectral_clustering/intro_to_spectral_clustering/</guid>
-      <description>&lt;p&gt;A beginner&amp;rsquo;s introduction to the intuitive math behind spectral clustering and how it is useful versus other clustering methods.&lt;/p&gt;</description>
+      <description>&lt;p&gt;A beginner&#39;s introduction to the intuitive math behind spectral clustering and how it is useful versus other clustering methods.&lt;/p&gt;</description>
     </item>
     
     <item>
